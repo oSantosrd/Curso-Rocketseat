@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    padding: 80px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+section > div {
+    margin-top: 50px;
+}
+
+.img-container {
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    place-items: center;
+}
+
+.img-container img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.h-50 {
+    aspect-ratio: 6/2;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1B1B1B;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1B1B1B;
+}
+
+h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #E1624F;
+    text-transform: uppercase;
+}
+
+p {
+    color: #333333;    
+}
+
+.img-legend {
+    font-style: italic;
+    text-align: center;
+}
+
+.bold {
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+ul {
+    margin-top: 0;
+    padding-left: 20px;
+}
+
+ul li {
+    font-weight: 700;
+}
+
+.blue {
+    color: #0C51A7;
+}
+
+.orange {
+    color: #E95E10;
+}
+
+.pink {
+    color: #E5245E;
+}
+
+.purple {
+    color: #591B98;
+}
+
+.divisor {
+    display: block;
+    margin: 36px 0;
+    width: 100%;
+    height: 1px;
+    background: #eee;
+}
+
+.text-center {
+    text-align: center;
+}
