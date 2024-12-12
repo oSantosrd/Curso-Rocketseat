@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+i {
+    font-size: 1.2rem;
+}
+
+:root {
+    --brand-color: #EF5F4C;
+    --background-color: #FFF;
+    --surface-color: #F5F5F5;
+    --skeleton-color: #D9D9D9;
+    --shape-transparency: #ffffff8f;
+    --text-color-primary: #313131;
+    --text-color-secondary: #6C6C6C;
+}
+
+.heading {
+    color: var(--text-color-primary);
+    font-size: 2rem;
+    line-height: 125%;
+    font-weight: 700;
+}
+
+.p-md {
+    color: var(--text-color-secondary);
+    font-size: .875rem;
+    line-height: 170%;
+}
+
+.p-sm {
+    color: var(--text-color-secondary);
+    font-size: .75rem;
+    line-height: 170%;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: var(--surface-color);
+}
+
+header {
+    width: 100%;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.1rem 2rem;
+}
+
+header nav .logotipo {
+    display: flex;
+}
+
+header nav .user-navigation {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.search-bar {
+    width: 2rem;
+    height: 2rem;
+    padding: 0 10px;
+    border-radius: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    transition: .2s;
+}
+
+.search-bar:has(:hover, :focus-within) {
+    width: 14rem;
+    background: #fff;
+    box-shadow: 0 0 10px 0 #0000001a;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 3px 5px;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: .875rem;
+    color: var(--text-color-primary);
+    transition: .2s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.search-bar:has(:hover, :focus-within) input {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-bar button {
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text-color-secondary);
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: right .2s;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.search-bar:has(:hover, :focus-within) button {
+    right: 5px;
+}
+
+.search-bar button i {
+    font-size: 1rem;
+}
+
+.link {
+    color: var(--text-color-secondary);
+    position: relative;
+    text-decoration: none;
+}
+
+.link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: var(--text-color-secondary);
+    position: absolute;
+    bottom: 0px;
+    transition: .3s ease-out;
+}
+
+.link:hover::after {
+    width: 100%;
+} 
+
+.user-account {
+    width: 2.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-account img {
+    width: 100%;
+    object-fit: cover;
+    transition: .2s ease-out;
+}
+
+.user-account:hover img {
+    transform: scale(1.2);
+}
+
+main .main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.user-main {
+    flex: 1;
+    max-width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.img-container {
+    flex: 0 0 clamp(100px, 11rem, 40%);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.change-photo-container {
+    position: absolute;
+    inset: 0;
+    background: #00000050;
+    overflow: hidden;
+    border-radius: 50%;
+    backdrop-filter: blur(2px);
+    transition: .2s ease-out;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.img-container:hover .change-photo-container {
+    opacity: 1;
+    visibility: visible;
+}
+
+.change-photo-container a {
+    text-decoration: none;
+    font-size: .8rem;
+    color: #fff;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.change-photo-container a i {
+    font-size: 1.2rem;
+}
+
+.img-container img {
+    width: 100%;
+    object-fit: cover;
+    transition: .2s ease-out;
+}
+
+.img-container:hover img {
+    transform: scale(1.2);
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.user-info {
+    min-width: 15rem;
+}
+
+.user-info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.user-info ul li {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.user-info ul li i {
+    color: var(--brand-color);
+}
+
+
+.grid-container {
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(150px, 250px, 300px), 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.grid-container img {
+    width: 100%;
+    /* max-width: 300px; */
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+footer {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+footer nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer nav ul li {
+    list-style: none;
+}
