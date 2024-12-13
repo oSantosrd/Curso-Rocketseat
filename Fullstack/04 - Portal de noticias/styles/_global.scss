@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Archivo', sans-serif;
+}
+
+//Produto
+$brand-color-light: #60A5FA;
+$brand-color-dark: #1D4ED8;
+//Base
+$bg-color: #0F172A; 
+$stroke-color: #1E293B;
+//Textos
+$text-color-primary: #F1F5F9;
+$text-color-secondary: #CBD5E1;
+//Gradiente
+$linear-bg: #02061700, #020617;
+
+body {
+    background-color: $bg-color;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+i {
+    font-size: 1.2rem;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.divisor {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $stroke-color;
+}
+
+.h1,.h2,.h3,.p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.h1 {
+    color: $text-color-primary;
+    font-size: 1.5rem;
+    line-height: 135%;
+    font-weight: bolder;
+
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+}
+
+.h2 {
+    color: $text-color-primary;
+    font-size: 1rem;
+    line-height: 140%;
+    font-weight: bolder;
+
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+.h3 {
+    color: $text-color-primary;
+    font-size: .875rem;
+    line-height: 140%;
+    font-weight: bolder;
+
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+}
+
+.span {
+    color: $text-color-secondary;
+    font-size: .875rem;
+    line-height: 145%;
+    font-weight: 600;
+}
+
+.p {
+    color: $text-color-secondary;
+    font-size: .875rem;
+    line-height: 160%;
+    font-weight: 400;
+
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+}
+
+.content-tag {
+    color: $text-color-primary;
+    font-size: .625rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: $brand-color-dark;
+    box-shadow: 0px 4px 16px 0px rgba(2, 6, 23, 0.25);
+}
+
+.link-button-icon {
+    color: $text-color-secondary;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 145%;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+    transition: .2s;
+
+    &:hover {
+        color: $brand-color-light;
+    }
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+
+.link-button {
+    color: $text-color-secondary;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 145%;
+    position: relative;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1px;
+        background: $text-color-secondary;
+        position: absolute;
+        bottom: 0px;
+        transition: .3s ease-out;
+    }
+
+    &:hover::after {
+        width: 100%;
+    } 
+}

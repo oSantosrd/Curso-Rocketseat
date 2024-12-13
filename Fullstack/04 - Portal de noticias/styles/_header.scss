@@ -1,0 +1,52 @@
+header {
+    width: 100%;
+    
+    .main-header {
+        padding: 1.25rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .logotipo {
+        color: $brand-color-light;
+        font-size: 1.5rem;
+        font-family: 'Archivo Black', sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: currentColor;
+            position: absolute;
+            transition: width .3s ease-out;
+        }
+        &::before {
+            top: 2px;
+            left: 0;
+        }
+        &::after {
+            bottom: 2px;
+            right: 0;
+        }
+        &:hover::before,
+        &:hover::after {
+            width: 100%;
+        }
+    }
+
+    nav ul {
+        padding: .875rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+}

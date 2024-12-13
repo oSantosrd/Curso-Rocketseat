@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Archivo", sans-serif;
+}
+
+body {
+  background-color: #0F172A;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+section .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+li {
+  list-style: none;
+}
+
+i {
+  font-size: 1.2rem;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.divisor {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #1E293B;
+}
+
+.h1, .h2, .h3, .p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.h1 {
+  color: #F1F5F9;
+  font-size: 1.5rem;
+  line-height: 135%;
+  font-weight: bolder;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.h2 {
+  color: #F1F5F9;
+  font-size: 1rem;
+  line-height: 140%;
+  font-weight: bolder;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.h3 {
+  color: #F1F5F9;
+  font-size: 0.875rem;
+  line-height: 140%;
+  font-weight: bolder;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.span {
+  color: #CBD5E1;
+  font-size: 0.875rem;
+  line-height: 145%;
+  font-weight: 600;
+}
+
+.p {
+  color: #CBD5E1;
+  font-size: 0.875rem;
+  line-height: 160%;
+  font-weight: 400;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+
+.content-tag {
+  color: #F1F5F9;
+  font-size: 0.625rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #1D4ED8;
+  box-shadow: 0px 4px 16px 0px rgba(2, 6, 23, 0.25);
+}
+
+.link-button-icon {
+  color: #CBD5E1;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 145%;
+  text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  transition: 0.2s;
+}
+.link-button-icon:hover {
+  color: #60A5FA;
+}
+.link-button-icon::first-letter {
+  text-transform: uppercase;
+}
+
+.link-button {
+  color: #CBD5E1;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 145%;
+  position: relative;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.link-button::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #CBD5E1;
+  position: absolute;
+  bottom: 0px;
+  transition: 0.3s ease-out;
+}
+.link-button:hover::after {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+}
+header .main-header {
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+header .logotipo {
+  color: #60A5FA;
+  font-size: 1.5rem;
+  font-family: "Archivo Black", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+}
+header .logotipo::before, header .logotipo::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  position: absolute;
+  transition: width 0.3s ease-out;
+}
+header .logotipo::before {
+  top: 2px;
+  left: 0;
+}
+header .logotipo::after {
+  bottom: 2px;
+  right: 0;
+}
+header .logotipo:hover::before, header .logotipo:hover::after {
+  width: 100%;
+}
+header nav ul {
+  padding: 0.875rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+main .main-container {
+  display: grid;
+  grid-template-areas: "a a b c" "a a d e";
+  gap: 1rem;
+}
+main .main-container .main-card {
+  border-radius: 0.25rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+main .main-container .main-card img {
+  filter: brightness(70%);
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s ease-out;
+}
+main .main-container .main-card .card-info {
+  background-image: linear-gradient(rgba(2, 6, 23, 0), #020617);
+  min-height: 50%;
+  padding-top: 0 !important;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  position: absolute;
+  inset: auto 0 0 0;
+}
+main .main-container .main-card:first-child {
+  grid-area: a;
+}
+main .main-container .main-card:first-child .card-info {
+  padding: 1.5rem;
+}
+main .main-container .main-card:hover img {
+  filter: brightness(50%);
+  transform: scale(1.2);
+}
+main .more-container {
+  padding-bottom: 1.5rem;
+}
+main .more-container .content {
+  display: flex;
+  gap: 1rem;
+}
+main .more-container .content .card {
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+}
+main .more-container .content .card .content-tag {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 1;
+}
+main .more-container .content .card img {
+  border-radius: 0.25rem;
+  width: 100%;
+  aspect-ratio: 73/40;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .more-container .content .card h6 {
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+main .flex-info {
+  display: flex;
+  gap: 2rem;
+}
+main .flex-info .highlights-container {
+  flex: 1;
+}
+main .flex-info .highlights-container > .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .flex-info .highlights-container > .content .card {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+main .flex-info .highlights-container > .content .card .content {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main .flex-info .highlights-container > .content .card .img-container {
+  flex: 1;
+  min-height: 100%;
+  aspect-ratio: 1;
+  position: relative;
+}
+main .flex-info .highlights-container > .content .card .img-container .overflow {
+  height: 100%;
+  overflow: hidden;
+}
+main .flex-info .highlights-container > .content .card .img-container .overflow img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.2s ease-out;
+}
+main .flex-info .highlights-container > .content .card .img-container .overflow .see-news {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transition: 0.2s ease-out;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+main .flex-info .highlights-container > .content .card .img-container .overflow .see-news p {
+  color: #fff;
+  font-size: 0.75rem;
+  text-align: center;
+}
+main .flex-info .highlights-container > .content .card:hover .img-container img {
+  transform: scale(1.2);
+}
+main .flex-info .highlights-container > .content .card:hover .img-container .see-news {
+  visibility: visible;
+  opacity: 1;
+}
+main .flex-info aside {
+  flex: 1;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .flex-info aside > img {
+  width: 100%;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+main .flex-info aside .seethis-container .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .flex-info aside .seethis-container .content .card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+main .flex-info aside .seethis-container .content .card .img-container {
+  flex: 1;
+  min-height: 100%;
+  aspect-ratio: 1;
+}
+main .flex-info aside .seethis-container .content .card .img-container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .flex-info aside .seethis-container .content .card .info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+main .flex-info aside .seethis-container .content .card .info .h3 {
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}/*# sourceMappingURL=index.css.map */
