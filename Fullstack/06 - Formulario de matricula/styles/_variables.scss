@@ -1,0 +1,52 @@
+/******** COLORS ********/
+//brand
+$brand-light: #F67841; 
+$brand-mid: #F3541C; 
+$brand-dark: #E43A12;
+
+//text
+$text-primary: #292524; 
+$text-secondary: #57534E; 
+$text-tertiary: #8F8881; 
+$text-highlight: $brand-dark; 
+
+//surface
+$surface-primary: #FFFFFF; 
+$surface-secondary: #FEE7D6; 
+$surface-disabled: #E7E5E4; 
+
+//stroke
+$stroke-default: #D6D3D1; 
+$stroke-highlight: $brand-mid; 
+
+//semantic
+$semantic-error: #DC2626; 
+
+//suporting
+$orange: #F9A474; 
+$yellow: #FEDF6F; 
+$green: #C7D78D; 
+$blue: #B8CEDC; 
+$violet: #C3B2E7; 
+$pink: #F682A5; 
+
+.tg-1 {
+  font-size: 2.5rem;
+  line-height: 125%;
+  font-weight: 600;
+  color: $text-primary;
+}
+
+.tg-2 {
+  font-size: 1.5rem;
+  line-height: 125%;
+  font-weight: 600;
+  color: $text-primary;
+}
+
+.tg-p {
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: 400;
+  color: $text-secondary;
+}
