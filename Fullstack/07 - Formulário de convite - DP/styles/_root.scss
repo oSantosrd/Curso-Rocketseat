@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo para o scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff1a; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff33;
+}
+
+::-webkit-scrollbar-track { background-color: transparent }
+::-webkit-scrollbar-corner { background-color: transparent }
+
+//font family
+$font-leckerli: "Leckerli One", sans-serif;
+$font-baloo: "Baloo 2", sans-serif;
+$font-open-sans: "Open Sans", sans-serif;
+
+//brand
+$brand-light: #59B2FF;
+$brand-mid: #3487CF;
+$brand-dark: #1D6FB6;
+
+//accent
+$colors: (
+  blue: #59B2FF,
+  navy: #6A59FF,
+  purple: #B259FF,
+  fuschia: #FF59F9,
+  pink: #FF598B,
+  red: #FF5959,
+  orange: #FF8B59,
+  yellow: #FFCD59,
+  lime: #E1FF59,
+  green: #59FF91,
+  cyan: #59FFF9
+);
+
+//feedback
+$danger: #FF5959;
+
+//input
+$input-base: #1C1F21;
+$input-stroke: #363B40;
+$input-placeholder: #869198;
+
+//shape
+$shape-background: #131516;
+$shape-body: #212427;
+$shape-button: #2D3136;
+$shape-hover: #383D42;
+
+//text
+$text-body: #C8CDD0;
+$text-heading: #F9F9F9;
+
+//spacer 
+$spacer: 1.25rem;
+
+html {
+  font-family: $font-open-sans;
+}

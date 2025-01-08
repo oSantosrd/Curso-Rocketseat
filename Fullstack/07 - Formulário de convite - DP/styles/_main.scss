@@ -1,0 +1,53 @@
+main {
+  display: flex;
+  gap: $spacer;
+  padding: 0 $spacer;
+  background-color: $shape-background;
+
+  position: relative;
+
+  section {
+    border-radius: .75rem;
+    margin: $spacer 0;
+  }
+
+  .fixed-container {
+    position: sticky;
+    top: $spacer;
+
+    background: url(../images/Background.png) center/cover no-repeat;
+
+    height: calc(100vh - $spacer * 2);
+    padding: 2rem;
+
+    .heading {
+      display: grid;
+      gap: 1rem;
+
+      .info-content {
+        display: grid;
+        gap: .25rem;
+      }
+    }
+  }
+
+  .main-container {
+    flex: 1;
+    background-color: $shape-body;
+
+    padding: 5rem 2rem;
+
+    .confirmation-container {
+      display: grid;
+      gap: .75rem;
+      padding-top: 1.5rem;
+
+      border-top: 1px solid $input-stroke; 
+    }
+  }
+
+  .submit-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
